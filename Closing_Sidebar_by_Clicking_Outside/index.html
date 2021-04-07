@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="toggle"></div>
+    <div id="sidebar">
+        <ul>
+            <li><a href="#">Lorem.</a></li>
+            <li><a href="#">Non.</a></li>
+            <li><a href="#">Sit!</a></li>
+            <li><a href="#">Mollitia!</a></li>
+            <li><a href="#">Incidunt!</a></li>
+            <li><a href="#">Rerum.</a></li>
+        </ul>
+        <div class="content">
+            <h1>Lorem, ipsum dolor.</h1>
+            <h1>Lorem, ipsum.</h1>
+            <h3><span>01</span>Lorem ipsum dolor sit amet.</h3>
+            <h3><span>02</span>Lorem ipsum dolor sit amet.</h3>
+        </div>
+    </div>
+    <script>
+        const toggle = document.querySelector('#toggle')
+        const sidebar = document.querySelector('#sidebar')
+        toggle.onclick = () => {
+            toggle.classList.toggle('active')
+            sidebar.classList.toggle('active')
+        }
+        document.onclick = (e) => {
+            if (e.target.id !== 'sidebar' && e.target.id !== 'toggle') {
+                toggle.classList.toggle('active')
+                sidebar.classList.toggle('active')
+            }
+        }
+    </script>
+</body>
+</html>
